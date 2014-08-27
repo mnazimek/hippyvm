@@ -74,6 +74,7 @@ import hippy.module.ctype
 import hippy.module.date.datetime_klass
 import hippy.module.date.dateinterval_klass
 import hippy.module.date.datetimezone_klass
+import hippy.module.imagick
 
 from hippy.module.date import default_timezone
 from hippy.buffering import Buffer
