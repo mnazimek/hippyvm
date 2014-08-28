@@ -2,15 +2,15 @@ from rpython.translator.tool.cbuild import ExternalCompilationInfo
 from rpython.rtyper.tool import rffi_platform as platform
 from rpython.rtyper.lltypesystem import rffi, lltype
 
-eci = ExternalCompilationInfo(includes=['wand/magickWand.h','magick/MagickCore.h'],
-                              include_dirs=['/usr/include/mutils/'],
+eci = ExternalCompilationInfo(includes=['imageMagick/wand/magic-image.h'],
+                              include_dirs=['/usr/include/imageMagick/wand/'],
                               library_dirs=['/usr/lib/', ],
                               libraries=['ImageMagick'])
 
 
 class CConfig:
     _compilation_info_ = eci
-    IMAGICK = platform.Struct('IMAGICK', [])
+    IMAGICK = platform.Struct('MagickWand', [])
 
 globals().update(platform.configure(CConfig))
 
