@@ -13,6 +13,6 @@ hippy-c
 __pycache__/
 pypy/
 
-ext_module
+ext_module/mcrypt
 testing/ext-module
 hippy/lexer_cache/runner_*.py
